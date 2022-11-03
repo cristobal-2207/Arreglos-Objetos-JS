@@ -6,28 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Desafío 15: Arreglos y Objetos con JS</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
   <nav class="nav">
-    <form id="formulario">
-      <p>Cantidad de cuartos:</p><input id="cantidadCuartos" min="0" type="number">
-      <p>Metros cuadrados</p>
-      <div class="precioFiltro">
-        <div class="precioMinimo">
-            <p>Desde</p>
-            <input type="number" id="min" min="0" />
+    <form id="form">
+      <p>HABITACIONES:</p>
+      <select id="roomsInput">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <p>PRECIOS:</p>
+      <div class="priceNav">
+        <div class="minPrice">
+          <p>Desde</p>
+          <input type="number" id="min" min="0" />
         </div>
-        <div class="precioMaximo">
-            <p>Hasta</p>
-            <input type="number" id="max" min="0" />
+        <div class="maxPrice">
+          <p>Hasta</p>
+          <input type="number" id="max" min="0" />
         </div>
       </div>
-      <button type="submit">Buscar</button>
+      <button type="submit">Filtrar</button>
     </form>
   </nav>
-  <main class="productos">
-    <p class="total">Total : <span id="totalProductos"></span></p>
-    <div class="producto-container" id="productoContainer"></div>
+  <main class="products">
+    <p class="total">Total de sugerencias: <span id="totalProducts"></span></p>
+    <div class="product-container" id="productContainer"></div>
   </main>
   <script src="/assets/js/main.js"></script>
 </body>
