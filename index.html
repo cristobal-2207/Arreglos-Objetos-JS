@@ -4,10 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desafío 15</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <title>Desafío 15: Arreglos y Objetos con JS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+  <nav class="nav">
+    <form id="formulario">
+      <p>Cantidad de cuartos:</p><input id="cantidadCuartos" min="0" type="number">
+      <p>Metros cuadrados</p>
+      <div class="precioFiltro">
+        <div class="precioMinimo">
+            <p>Desde</p>
+            <input type="number" id="min" min="0" />
+        </div>
+        <div class="precioMaximo">
+            <p>Hasta</p>
+            <input type="number" id="max" min="0" />
+        </div>
+      </div>
+      <button type="submit">Buscar</button>
+    </form>
+  </nav>
+  <main class="productos">
+    <p class="total">Total : <span id="totalProductos"></span></p>
+    <div class="producto-container" id="productoContainer"></div>
+  </main>
   <script src="/assets/js/main.js"></script>
 </body>
 </html>
